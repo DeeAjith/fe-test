@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="page-content flex">
       <div className="max-w-screen-xl mx-auto my-20">
-        <div className="flex overflow-x-auto gap-x-5 whitespace-nowrap mb-8">
+        <div className="flex overflow-x-auto gap-x-5 whitespace-nowrap mb-5">
           <div className="flex items-center px-5 py-3 font-medium text-gray-500 rounded-lg cursor-pointer bg-gray-50 gap-x-2">
             All category
           </div>
