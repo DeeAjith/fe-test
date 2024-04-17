@@ -2,20 +2,6 @@ export default function Home() {
   return (
     <main className="page-content flex">
       <div className="max-w-screen-xl mx-auto my-20">
-        <div className="flex overflow-x-auto gap-x-5 whitespace-nowrap mb-5">
-          <div className="flex items-center px-5 py-3 font-medium text-gray-500 rounded-lg cursor-pointer bg-gray-50 gap-x-2">
-            All category
-          </div>
-          <div className="flex items-center px-5 py-3 font-medium text-gray-900 bg-gray-100 rounded-lg cursor-pointer gap-x-2 hover:bg-gray-50 hover:text-gray-500">
-            Frontend Developer
-          </div>
-          <div className="flex items-center px-5 py-3 font-medium text-gray-900 bg-gray-100 rounded-lg cursor-pointer gap-x-2 hover:bg-gray-50 hover:text-gray-500">
-            Backend Developer
-          </div>
-          <div className="flex items-center px-5 py-3 font-medium text-gray-900 bg-gray-100 rounded-lg cursor-pointer gap-x-2 hover:bg-gray-50 hover:text-gray-500">
-            Fullstack Developer
-          </div>
-        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab
           dolore ipsa dolorum aut voluptatum quis nobis minima veniam cumque
