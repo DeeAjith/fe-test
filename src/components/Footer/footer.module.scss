@@ -1,0 +1,29 @@
+.footerMenu {
+  .menuTitle {
+    margin-bottom: 15px;
+  }
+  .footerLinks {
+    column-gap: 5px;
+    row-gap: 15px;
+  }
+  ul {
+    &:not(:last-child) {
+      .footerLinks {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &:last-child {
+      .footerLinks {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          flex-basis: calc(50% - 2.5px);
+        }
+      }
+    }
+  }
+  li {
+    @apply text-sm;
+  }
+}
