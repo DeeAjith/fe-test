@@ -1,19 +1,32 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { BurgerMenu_Icon } from '@/assets/CustomIcons/Icons'
 import { MenuItems } from '@/constants'
+
 type HeaderProps = {
   menuData: any
 }
 
 const Header = ({ menuData }: HeaderProps) => {
-  const [isHidden, setIsHidden] = useState<Boolean>(false)
+  const [isOpen, setIsOpen] = useState(true) // Use `isOpen` for clarity
+  const mobileMenuRef = useRef(null) // Reference for handling scroll
+
   const handleMenuToggle = () => {
-    setIsHidden(!isHidden)
+    setIsOpen(!isOpen)
+    // Optionally, adjust focus for accessibility (see note below)
   }
 
+  // Handle body overflow based on menu state
+  useEffect(() => {
+    const body = document.body
+    body.style.overflow = isOpen ? 'auto' : 'hidden'
+
+    return () => {
+      body.style.overflow = 'auto' // Reset on unmount
+    }
+  }, [isOpen])
   return (
     <>
       <header>
@@ -30,9 +43,10 @@ const Header = ({ menuData }: HeaderProps) => {
             </Link>
             <div
               className={`${
-                isHidden ? 'hidden' : 'block'
-              } w-full fixed top-10 h-auto bg-fe-dark left-0 z-10 lg:relative lg:inset-[unset] lg:bg-transparent`}
+                isOpen ? 'hidden' : 'block'
+              } lg:block w-full fixed top-10 h-auto bg-fe-dark left-0 z-10 lg:relative lg:inset-[unset] lg:bg-transparent`}
               id="mobile-menu"
+              ref={mobileMenuRef}
             >
               <ul className="justify-between items-center w-full flex-shrink lg:flex lg:w-auto">
                 {menuData.length > 0 ? (
@@ -84,7 +98,7 @@ const Header = ({ menuData }: HeaderProps) => {
                 className="block lg:hidden"
                 type="button"
                 aria-controls="mobile-menu"
-                aria-expanded={isHidden ? 'true' : 'false'}
+                aria-expanded={isOpen ? 'true' : 'false'}
                 onClick={handleMenuToggle}
               >
                 <span className="sr-only">Open main menu</span>

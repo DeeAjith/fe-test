@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="page-content flex">
       <div className="max-w-screen-xl mx-auto my-20">
-        <p>
+        <p className="px-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab
           dolore ipsa dolorum aut voluptatum quis nobis minima veniam cumque
           ducimus non fuga, harum deleniti modi. Debitis porro tenetur, quae

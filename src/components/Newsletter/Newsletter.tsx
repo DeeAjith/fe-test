@@ -9,7 +9,7 @@ const Newsletter = () => {
             type="email"
             id="email"
             className="px-6 py-5 w-full z-20 text-sm bg-fe-dark text-fe-gray-4 placeholder:text-fe-gray-4 focus-visible:rounded-none md:w-80"
-            placeholder="email"
+            placeholder="Your email ID"
             required
           />
           <button
