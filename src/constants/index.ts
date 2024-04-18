@@ -15,6 +15,22 @@ function generateUniqueId() {
   }
   return id
 }
+export type Color = {
+  title: string
+  color: string
+  image: string
+}
+export type Product = {
+  title: string
+  image: string
+  description: string
+  bookingAmount: number
+  price: number
+  currency: string
+  initialColor: string
+  initialSelectionIndex: number
+  colors: Color[]
+}
 //Menu Items
 export type MenuItems = {
   id: Key
@@ -59,13 +75,13 @@ export const menuItems: MenuItems[] = [
     tag: null,
   },
 ]
-export const productData = {
-  id: 1, // Unique identifier
+export const productData: Product = {
   title: 'Storie',
   image: '/bike-variants/green-variant.png',
-  description: 'A powerful and stylish electric bike...', // Add product description
-  bookingAmount: 2500, // Booking amount
-  price: 117357, // Price (incl. FAME II Subsidy)
+  description: 'A powerful and stylish electric bike...',
+  bookingAmount: 2500,
+  price: 117357,
+  currency: '₹',
   colors: [
     {
       title: 'Sparkling Green',
@@ -77,7 +93,9 @@ export const productData = {
       color: '#FFFFFF',
       image: '/bike-variants/white-variant.png',
     },
-  ], // Available color options
+  ],
+  initialColor: '#A0CABB', // Initial color selection
+  initialSelectionIndex: 0,
 }
 
 export const footerItems: FooterItems = {
