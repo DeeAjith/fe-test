@@ -4,7 +4,13 @@
 
 @layer base {
   h1 {
-    @apply text-2xl lg:text-5xl font-semibold;
+    @apply text-2xl lg:text-[50px] font-semibold leading-[60px];
+  }
+  h4 {
+    @apply text-[25px] lg:text-[40px] font-semibold;
+  }
+  h6 {
+    @apply text-[22px] lg:text-[25px] font-semibold;
   }
 }
 

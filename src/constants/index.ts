@@ -59,6 +59,26 @@ export const menuItems: MenuItems[] = [
     tag: null,
   },
 ]
+export const productData = {
+  id: 1, // Unique identifier
+  title: 'Storie',
+  image: '/bike-variants/green-variant.png',
+  description: 'A powerful and stylish electric bike...', // Add product description
+  bookingAmount: 2500, // Booking amount
+  price: 117357, // Price (incl. FAME II Subsidy)
+  colors: [
+    {
+      title: 'Sparkling Green',
+      color: '#A0CABB',
+      image: '/bike-variants/green-variant.png',
+    },
+    {
+      title: 'Sparkling White',
+      color: '#FFFFFF',
+      image: '/bike-variants/white-variant.png',
+    },
+  ], // Available color options
+}
 
 export const footerItems: FooterItems = {
   address: {
@@ -159,3 +179,14 @@ export const socialLinks = [
     icon: FaYoutube as IconType,
   },
 ] as const
+
+export const swatchData = [
+  '#A0CABB',
+  '#707485',
+  '#233A78',
+  '#93D4DE',
+  '#C5DBF4',
+  '#B42025',
+  '#FFFFFF',
+  '#F5D266',
+]

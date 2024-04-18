@@ -30,7 +30,7 @@ const Header = ({ menuData }: HeaderProps) => {
   return (
     <>
       <header>
-        <nav className="bg-fe-dark border-gray-200 px-4 lg:px-6 py-4 dark:bg-gray-800">
+        <nav className="bg-fe-dark border-gray-200 px-5 lg:px-6 py-4 dark:bg-gray-800">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <Link href="/" className="flex items-center">
               <Image
