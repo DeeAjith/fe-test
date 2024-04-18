@@ -220,10 +220,10 @@ const RightSection: React.FC<RightSectionProps> = ({
   description,
 }) => (
   <div className="flex flex-col bg-fe-bg-offwhite p-5 pt-10 xl:pt-16 xl:pb-20 md:w-full xl:w-3/5 productRight xl:ps-16 xl:pe-5">
-    <p className="flex gap-10 font-semibold text-fe-gray-text-3 text-xs uppercase tracking-[0.5px] overflow-y-scroll-scroll md:overflow-y-auto">
-      <span className="text-black active">01 Select model</span>
-      <span className="text-black active">02 Select COLOR</span>
-      <span>03 Your Details and preferred location</span>
+    <p className="flex gap-10 w-[375px] md:w-full font-semibold text-fe-gray-text-3 text-xs uppercase tracking-[0.5px] overflow-y-scroll md:overflow-y-auto over">
+      <span className="min-w-max text-black active">01 Select model</span>
+      <span className="min-w-max text-black active">02 Select COLOR</span>
+      <span className="min-w-max">03 Your Details and preferred location</span>
     </p>
     <h6 className="pt-10 pb-8 lg:w-[6ch]">Choose a colour</h6>
     <OptionsBox
