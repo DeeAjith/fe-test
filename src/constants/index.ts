@@ -52,9 +52,9 @@ export type AddressType = {
   details: string
 }
 export const menuItems: MenuItems[] = [
-  { id: generateUniqueId(), title: 'Storie', route: '/storie', tag: null },
-  { id: generateUniqueId(), title: 'Loev', route: '/loev', tag: null },
-  { id: generateUniqueId(), title: 'One', route: '/one', tag: null },
+  { id: generateUniqueId(), title: 'Storie', route: '/Storie', tag: null },
+  { id: generateUniqueId(), title: 'Loev', route: '/Loev', tag: null },
+  { id: generateUniqueId(), title: 'One', route: '/One', tag: null },
   {
     id: generateUniqueId(),
     title: 'Superbike',
