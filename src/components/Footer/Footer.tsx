@@ -5,9 +5,9 @@ import style from './footer.module.scss'
 import Newsletter from '../Newsletter'
 const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
   return (
-    <footer className="block w-full bg-black px-5 py-10 lg:pt-16 lg:pb-11">
+    <footer className="block bg-black px-5 py-10 lg:pt-16 lg:pb-11 w-full">
       <div className="mx-auto w-full max-w-screen-xl">
-        <div className="flex flex-col gap-8 text-center text-white items-center lg:justify-between lg:gap-0 lg:flex-row">
+        <div className="flex lg:flex-row flex-col lg:justify-between items-center gap-8 lg:gap-0 text-left text-white">
           <h1>
             Stay Informed <br />
             About Battre
@@ -16,10 +16,10 @@ const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
             <Newsletter />
           </div>
         </div>
-        <hr className="border-fe-gray-1 w-full my-10 lg:mt-11 lg:mb-9" />
-        <div className="flex flex-col lg:flex-row justify-between items-start">
+        <hr className="border-fe-gray-1 my-10 lg:mt-11 lg:mb-9 w-full" />
+        <div className="flex lg:flex-row flex-col justify-between items-start">
           {/* Address Section */}
-          <div className="address text-white text-[14px] mb-10 w-full max-w-80 flex gap-4 flex-col lg:mb-0 lg:max-w-56lg:tracking-[0.25px]">
+          <div className="flex flex-col gap-4 mb-10 lg:mb-0 w-full max-w-80 text-[14px] text-white lg:max-w-56lg:tracking-[0.25px] address">
             <p>{footerItems.address.addressLine1}</p>
             <p>{footerItems.address.addressLine2}</p>
             <p>{footerItems.address.details}</p>
@@ -30,7 +30,7 @@ const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
             {footerItems.menu.map((section) => (
               <ul
                 key={section.title}
-                className="flex-grow basis-1/2 last:basis-full last:flex last:mt-9 last:flex-col lg:last:mt-0"
+                className="flex-grow basis-1/2 last:basis-full last:flex last:flex-col lg:last:mt-0 last:mt-9"
               >
                 <li className={`${style.menuTitle} text-fe-gray`}>
                   {section.title}
@@ -48,12 +48,12 @@ const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
             ))}
           </div>
         </div>
-        <hr className="border-fe-gray-1 w-full mt-10 mb-8 lg:mt-24 lg:mb-8" />
-        <div className="flex w-full text-xs text-fe-gray-2 flex-col justify-center items-center lg:text-sm lg:flex-row lg:justify-between">
+        <hr className="border-fe-gray-1 mt-10 lg:mt-24 mb-8 lg:mb-8 w-full" />
+        <div className="flex lg:flex-row flex-col justify-center lg:justify-between items-center w-full text-fe-gray-2 text-xs lg:text-sm">
           <Link href={'#'}>
             <span>© 2023 Batt:RE. All rights reserved</span>
           </Link>
-          <span className="flex gap-6 mt-4 mb-6 lg:my-0">
+          <span className="flex gap-6 lg:my-0 mt-4 mb-6">
             <Link href={'#'}>
               <span>PRIVACY POLICY</span>
             </Link>
@@ -61,8 +61,8 @@ const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
               <span>TERMS & CONDITIONS</span>
             </Link>
           </span>
-          <div className="socialLinks flex gap-5 items-center">
-            <div className="socialLinks flex gap-5 items-center">
+          <div className="flex items-center gap-5 socialLinks">
+            <div className="flex items-center gap-5 socialLinks">
               {socialLinks.map((link) => (
                 <Link href={link.link} key={link.id}>
                   <span>
