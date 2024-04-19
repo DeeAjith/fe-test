@@ -30,12 +30,12 @@ const Header = ({ menuData }: HeaderProps) => {
   return (
     <>
       <header>
-        <nav className="bg-fe-dark border-gray-200 px-5 lg:px-6 py-4 dark:bg-gray-800">
+        <nav className="border-gray-200 bg-fe-dark dark:bg-gray-800 px-5 lg:px-6 py-4">
           <div className="flex justify-between items-center mx-auto max-w-screen-xl">
             <Link href="/" className="flex items-center">
               <Image
                 src="/Logo.png"
-                className="w-[76px] h-[21px] mr-3"
+                className="mr-3 w-[76px] h-[21px]"
                 alt="Logo"
                 width={100}
                 height={100}
@@ -48,21 +48,21 @@ const Header = ({ menuData }: HeaderProps) => {
               id="mobile-menu"
               ref={mobileMenuRef}
             >
-              <ul className="justify-between items-center w-full flex-shrink lg:flex lg:w-auto">
+              <ul className="lg:flex flex-shrink justify-between items-center w-full lg:w-auto">
                 {menuData.length > 0 ? (
                   <>
-                    <div className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0">
+                    <div className="flex lg:flex-row flex-col lg:space-x-10 mt-4 lg:mt-0 font-medium">
                       {menuData
                         .slice(0, -3)
                         .map(({ id, title, tag, route }: MenuItems) => (
                           <li key={id} className="">
                             <Link
                               href={route}
-                              className="block py-2 px-4 pe-3 lg:border-0 lg:p-0 lg:px-2 text-white text-sm font-normal leading-5 rounded-md lg:hover:bg-gray-400"
+                              className="block lg:border-0 lg:hover:bg-gray-400 px-4 lg:px-2 py-2 lg:p-0 rounded-md font-normal text-sm text-white leading-5 pe-3"
                             >
                               <span>{title}</span>
                               {tag && (
-                                <span className="bg-fe-yellow rounded-sm text-xs text-black leading-3 px-1 -top-1 ms-2 relative">
+                                <span className="relative -top-1 bg-fe-yellow px-1 rounded-sm text-black text-xs leading-3 ms-2">
                                   {tag}
                                 </span>
                               )}
@@ -70,18 +70,18 @@ const Header = ({ menuData }: HeaderProps) => {
                           </li>
                         ))}
                     </div>
-                    <div className="flex flex-col mt-4 mb-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0 lg:mb-0">
+                    <div className="flex lg:flex-row flex-col lg:space-x-10 mt-4 lg:mt-0 mb-4 lg:mb-0 font-medium">
                       {menuData
                         .slice(-3)
                         .map(({ id, title, tag, route }: MenuItems) => (
                           <li key={id} className="">
                             <Link
                               href={route}
-                              className="block py-2 px-4 pe-3 lg:border-0 lg:p-0 lg:px-2 text-white text-sm font-normal leading-5 rounded-md lg:hover:bg-gray-400"
+                              className="block lg:border-0 lg:hover:bg-gray-400 px-4 lg:px-2 py-2 lg:p-0 rounded-md font-normal text-sm text-white leading-5 pe-3"
                             >
                               <span>{title}</span>
                               {tag && (
-                                <span className="bg-fe-yellow rounded-sm text-xs text-black leading-3 px-1 -top-2 ms-2 relative">
+                                <span className="relative -top-2 bg-fe-yellow px-1 rounded-sm text-black text-xs leading-3 ms-2">
                                   {tag}
                                 </span>
                               )}
@@ -102,7 +102,7 @@ const Header = ({ menuData }: HeaderProps) => {
                 onClick={handleMenuToggle}
               >
                 <span className="sr-only">Open main menu</span>
-                <BurgerMenu_Icon fillColor="currentColor" />
+                <BurgerMenu_Icon fill="white" />
               </button>
             </div>
           </div>
