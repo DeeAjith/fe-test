@@ -7,8 +7,8 @@ const Footer = ({ footerItems }: { footerItems: FooterItems }) => {
   return (
     <footer className="block bg-black px-5 py-10 lg:pt-16 lg:pb-11 w-full">
       <div className="mx-auto w-full max-w-screen-xl">
-        <div className="flex lg:flex-row flex-col lg:justify-between items-center gap-8 lg:gap-0 text-left text-white">
-          <h1>
+        <div className="flex lg:flex-row flex-col lg:justify-between items-center gap-8 lg:gap-0 text-center text-white">
+          <h1 className="text-left">
             Stay Informed <br />
             About Battre
           </h1>
